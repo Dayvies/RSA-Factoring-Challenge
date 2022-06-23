@@ -10,5 +10,4 @@ with open(sys.argv[1]) as file:
                 break
             else:
                 continue
-        if i !=0:
-               print("{}={}*{}".format(i, i, 1)) 
+
