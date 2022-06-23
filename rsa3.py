@@ -8,10 +8,10 @@ def factors2(public):
                 return [i, i // count, count]
             else:
                 continue
-        if i !=0:
-               return[i, i, 1]
+
 def printf(listd):
-        print("{}={}*{}".format(listd[0], listd[1] , listd[2]))
+        if (listd):
+            print("{}={}*{}".format(listd[0], listd[1] , listd[2]))
         
 
 with open(sys.argv[1]) as file:

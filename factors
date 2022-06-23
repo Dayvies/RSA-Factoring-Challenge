@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 import sys
-with open(sys.argv[1]) as file:
-    for line in file:
-        i = (int(line.rstrip()))
+from functools import reduce
+def factors2(public):
+        i = (int(public))
         for count in range(2, int(i**0.5) + 1):
             if i % count == 0:
-                print("{}={}*{}".format(i, i // count, count))
-                i = 0
-                break
+                return [i, i // count, count]
             else:
                 continue
 
+def printf(listd):
+        print("{}={}*{}".format(listd[0], listd[1] , listd[2]))
+        
+
+with open(sys.argv[1]) as file:
+        list(map(printf,list(map(factors2, [line.strip() for line in file]))))
