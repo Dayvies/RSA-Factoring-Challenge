@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import sys
+
+
 def factors(n):
     step = 2 if n % 2 == 0 else 1
     return [i for i in range(2, int(n**0.5) + 1, step) if n % i == 0]
