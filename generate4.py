@@ -10,4 +10,8 @@ with open(sys.argv[1]) as file:
         str2 = "factor " + str(x)
         output = sp.getoutput(str2)
         y = output.split()
-        print("{}={}*{}".format(y[0][:-1], int(y[0][:-1])//int(y[1]), y[1]))
+        if len(y) == 3:
+            print("{}={}*{}".format(y[0][:-1],
+                  int(y[0][:-1])//int(y[1]), y[1]))
+        else:
+            pass
