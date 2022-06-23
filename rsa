@@ -4,9 +4,8 @@ import subprocess as sp
 
 
 x = ""
-with open(sys.argv[1]) as file:
-    for line in file:
-        x = line.rstrip()
+with open(sys.argv[1]) as file: 
+        x = file.readline().rstrip()
         str2 = "factor " + str(x)
         output = sp.getoutput(str2)
         y = output.split()
